@@ -10,6 +10,9 @@ import {
 } from "reactstrap";
 
 export default class MovieCard extends Component {
+  componentWillUnmount() {
+    alert(this.props.titleText + " silinsin mi?");
+  }
   render() {
     return (
       <Card
