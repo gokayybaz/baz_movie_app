@@ -37,7 +37,7 @@ export default class MovieCard extends Component {
             <Button color="success" outline>
               İzle
             </Button>
-            <Button color="danger" outline>
+            <Button onClick={this.props.removeMovie} color="danger" outline>
               Kaldır
             </Button>
           </div>
