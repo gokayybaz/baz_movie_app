@@ -1,17 +1,31 @@
+/* eslint-disable react/prop-types */
 import { Component } from "react";
-import { Button, Input } from "reactstrap";
+import { Button, Input, Form } from "reactstrap";
 
 export default class NavBarSearch extends Component {
+  constructor() {
+    super();
+  }
   render() {
     return (
-      <div style={{ display: "flex" }}>
-        <Input
-          style={{ width: "100%" }}
-          placeholder="Search for Movie/Series"
-        />
-        <Button style={{ marginLeft: "0.5rem" }} color="warning">
-          Search
-        </Button>
+      <div>
+        <Form style={{ display: "flex" }}>
+          <Input
+            onChange={
+              (e) => this.props.filterMovies(e.target.value)
+              // console.log(e.target.value);
+            }
+            style={{ width: "100%" }}
+            placeholder="Search for Movie/Series"
+          />
+          <Button
+            // onClick={this.props.filterMovies}
+            style={{ marginLeft: "0.5rem" }}
+            color="warning"
+          >
+            Search
+          </Button>
+        </Form>
       </div>
     );
   }

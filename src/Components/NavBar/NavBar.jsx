@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Component } from "react";
 import { Navbar, NavbarBrand } from "reactstrap";
 import NavBarButton from "./NavBarButton";
@@ -11,7 +12,7 @@ export default class NavBar extends Component {
             <NavBarButton />
             <h3 style={{ marginLeft: "1rem" }}>Baz Movie App</h3>
           </NavbarBrand>
-          <NavBarSearch />
+          <NavBarSearch filterMovies={this.props.filterMovies} />
         </Navbar>
       </>
     );
