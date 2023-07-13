@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Component } from "react";
-import { Input, Form } from "reactstrap";
+import { Input, Form, Button } from "reactstrap";
 
 export default class NavBarSearch extends Component {
   constructor() {
@@ -18,13 +18,13 @@ export default class NavBarSearch extends Component {
             style={{ width: "100%" }}
             placeholder="Search for Movie/Series"
           />
-          {/* <Button
+          <Button
             // onClick={this.props.filterMovies}
             style={{ marginLeft: "0.5rem" }}
             color="warning"
           >
             Search
-          </Button> */}
+          </Button>
         </Form>
       </div>
     );
