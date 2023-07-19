@@ -12,7 +12,7 @@ export default class NavBar extends Component {
             <NavBarButton />
             <h3 style={{ marginLeft: "1rem" }}>Baz Movie App</h3>
           </NavbarBrand>
-          <NavBarSearch filterMovies={this.props.filterMovies} />
+          <NavBarSearch searchEvent={this.props.searchEvent} />
         </Navbar>
       </>
     );

@@ -17,14 +17,14 @@ export default class MovieCard extends Component {
     return (
       <Card
       // style={{
-      //   width: "18rem",
+      //   width: "370px",
       // }}
       >
         <img height={400} alt="Sample" src={this.props.imageUrl} />
         <CardBody>
           <CardTitle tag="h5">{this.props.titleText}</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
-            Tür : {this.props.subtitleText}
+            Ortalama Puan : {this.props.subtitleText}
           </CardSubtitle>
           {/* <CardText>
               Some quick example text to build on the card title and make up the
@@ -40,9 +40,13 @@ export default class MovieCard extends Component {
             <Button color="success" outline>
               İzle
             </Button>
-            <Button onClick={this.props.removeMovie} color="danger" outline>
+            {/* <Button
+              onClick={() => this.props.removeMovie(this.props.movie)}
+              color="danger"
+              outline
+            >
               Kaldır
-            </Button>
+            </Button> */}
           </div>
         </CardBody>
       </Card>

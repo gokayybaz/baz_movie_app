@@ -5,6 +5,9 @@ import { Input, Form, Button } from "reactstrap";
 export default class NavBarSearch extends Component {
   constructor() {
     super();
+    this.state = {
+      searchQuery: "",
+    };
   }
   render() {
     return (
@@ -12,14 +15,14 @@ export default class NavBarSearch extends Component {
         <Form style={{ display: "flex" }}>
           <Input
             onChange={
-              (e) => this.props.filterMovies(e.target.value)
+              this.props.searchEvent
               // console.log(e.target.value);
             }
             style={{ width: "100%" }}
             placeholder="Search for Movie/Series"
           />
           <Button
-            // onClick={this.props.filterMovies}
+            // onClick={this.props.filterMovies()}
             style={{ marginLeft: "0.5rem" }}
             color="warning"
           >
